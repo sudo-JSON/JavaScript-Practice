@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+.container {
+    max-width: 100%;
+    margin: 10 auto;
+    /* border: 3px solid red; */
+    padding: 20px;
+}
+
+.heading {
+    color: blue;
+    padding: 10px;
+}   
+
+span {
+    padding: 10px;
+    margin: 10px 5px;
+}
+button {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    padding: 7px 16px;
+    min-height: 36px;
+    min-width: 36px;
+    color: #ffffff;
+    background: #008060;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+}
+
+button:hover {
+    background: #006e52;
+}
