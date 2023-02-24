@@ -5,7 +5,7 @@ This Contains Javascript Files
 ## Reason for not executing JS File, prompt command
 
 - prompt() is a method of the Global window object found in browsers. It's not part of the JavaScript language.
-- window object is not defined in this environment.
+- window object is not defined in Node JS environment.
 - Step 1: npm init
 
   Step 2: npm install prompt-sync
