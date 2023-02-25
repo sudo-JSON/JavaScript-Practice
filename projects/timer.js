@@ -1,5 +1,7 @@
 const seconds = document.getElementById("seconds");
 const tens = document.getElementById("tens");
+let i;
+let num;
 
 console.log(seconds);
 console.log(tens);
@@ -12,17 +14,6 @@ TODO : onclick of start button, it should start from 60 to 0, means it will decr
 ! Time should decrease every second, 
 */
 
-
-function decrease_10() {
-  let i = 10;
-  for (i; i<50; i++) {
-    tens.textContent = i
-    console.log(tens)
-    // console.log("Done!!")
-  }
-  
-}
-
 function start() {
     // let i
     // time_in = 10
@@ -31,13 +22,21 @@ function start() {
     //   // tens.textContent = i
     // }
     // console.log("Start")
-    setInterval(decrease,1000)
+    i = 5;
+    num = 100;
+    while (i<num) {
+      tens.textContent = decrease()
+      setInterval(decrease,1000)
+      i += 5;
+    }
+    
+    // console.log("Done!!")
+    
     // let i
     // for (i=0;  i<4; i++){
     //     tens.textContent = i
     // }
     // console.log(tens)
-    tens.textContent = i
 }
 
 /*
@@ -47,7 +46,16 @@ function start() {
  } */
 
 function decrease() {
-  console.log(tens)
+  let i = 10;
+  // for (i; i==0; i--) {
+  //   console.log("Done!!")
+  // }
+  for (num=0; num>0; num--) {
+    i -= 1;
+  }
+  console.log("return i")
+  
+  
   // alert("done!!")
   // let i;
   // let num = 0;
@@ -56,5 +64,14 @@ function decrease() {
   //     // console.log("Done!!")
   // }
   // console.log(tens)
+}
+
+function decrease_10() {
+  i = 10;
+  for (i; i<50; i++) {
+    tens.textContent = i
+    console.log(tens)
+    // console.log("Done!!")
+  }
 }
 
