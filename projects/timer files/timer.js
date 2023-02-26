@@ -1,10 +1,8 @@
 const seconds = document.getElementById("seconds");
 const tens = document.getElementById("tens");
-let i;
 let num;
-
-console.log(seconds);
-console.log(tens);
+// console.log(seconds);
+// console.log(tens);
 
 /*
 ? What I have to do ?
@@ -15,63 +13,39 @@ TODO : onclick of start button, it should start from 60 to 0, means it will decr
 */
 
 function start() {
-    // let i
-    // time_in = 10
-    // for (i=time_in; i<10; i--){
-    //   console.log(i)
-    //   // tens.textContent = i
-    // }
-    // console.log("Start")
-    i = 5;
-    num = 100;
-    while (i<num) {
-      tens.textContent = decrease()
-      setInterval(decrease,1000)
-      i += 5;
+    num = prompt("Enter a Positive Number");
+    seconds.textContent = num;
+    if (num > 0) {
+        setInterval(decrease,1000);
     }
-    
-    // console.log("Done!!")
-    
-    // let i
-    // for (i=0;  i<4; i++){
-    //     tens.textContent = i
-    // }
-    // console.log(tens)
+    else {
+        alert("Try Again!!")
+    }
 }
-
-/*
-! function reduce() {
-
-//   // alert("Shown!!")
- } */
 
 function decrease() {
-  let i = 10;
-  // for (i; i==0; i--) {
-  //   console.log("Done!!")
-  // }
-  for (num=0; num>0; num--) {
-    i -= 1;
-  }
-  console.log("return i")
-  
-  
-  // alert("done!!")
-  // let i;
-  // let num = 0;
-  // for (i=10; i>num; i--) {
-  //     tens.textContent = i
-  //     // console.log("Done!!")
-  // }
-  // console.log(tens)
+    num = num - 1;
+    if (num > 0) {
+        if (num < 10) {
+            seconds.textContent = "0" + num;
+        }
+        else {
+            seconds.textContent = num;
+        }
+    }
+    else if (num == 0) {
+        seconds.textContent = "0" + num;
+    }
+    else {
+        console.log();
+    }
 }
 
-function decrease_10() {
-  i = 10;
-  for (i; i<50; i++) {
-    tens.textContent = i
-    console.log(tens)
-    // console.log("Done!!")
-  }
+function stop() {
+    console.log("Stop is working!!");
 }
-
+function reset() {
+    num = 0 + "0";
+    seconds.textContent = num;
+    console.log("Reset is working!!");
+}
